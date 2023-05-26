@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .cube-container {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px; /* Add margin for spacing */
+  }
+  
+  .face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cube-block {
+    flex-basis: calc(100% / 3);
+    border: 2px solid #000;
+    box-sizing: border-box;
+  }  
+  
+  .front {
+    transform: translateZ(60px);
+  }
+  
+  .back {
+    transform: translateZ(-60px) rotateY(180deg);
+  }
+  
+  .left {
+    transform: translateZ(-60px) rotateY(-90deg);
+  }
+  
+  .right {
+    transform: translateZ(-60px) rotateY(90deg);
+  }
+  
+  .top {
+    transform: translateZ(-60px) rotateX(90deg);
+  }
+  
+  .bottom {
+    transform: translateZ(-60px) rotateX(-90deg);
+  }
+  
+  .controls {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .control-button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    font-size: 14px;
+  }
+  
